@@ -2,8 +2,8 @@ from tkinter import *
 import random
 import time
 
-GAME_WIDTH = 850
-GAME_HEIGHT = 600
+GAME_WIDTH = 1000
+GAME_HEIGHT = 700
 SPEED = 150
 SPACE_SIZE = 50
 BODY_PARTS = 3
