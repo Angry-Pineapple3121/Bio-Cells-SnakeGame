@@ -16,12 +16,14 @@ PRINT_NOTE_ON_GAME_END = True
 NOTES_INDEX = [
     """
                             ☆ Nucleus ☆
+
     ★ Coordinates cell activities including growth, 
     intermediary metabolism, protein synthesis, 
     and reproduction. ★
     """,
     """
                 ☆ Cytoplasm ☆
+
     ★ A jelly-like solution that
     fills the inside of the cell and
     surrounds other important parts
@@ -29,12 +31,14 @@ NOTES_INDEX = [
     """,
     """
                         ☆ Mitochondrion ☆
+
     ★ Oblong-shaped organelles, found in the
     cytoplasm of cells In the animal cell, they are
     the main source of power for the cell. ★
     """,
     """
                         ☆ Rough ER ☆
+
     ★ Has ribosomes on it, which help to
     make proteins for the cell. The Rough ER 
     gets its name because of the ribosomes
@@ -42,11 +46,13 @@ NOTES_INDEX = [
     """,
     """
                         ☆ Smooth ER ☆
+
     ★ The Smooth ER's job is to produce
     substances that are needed for the cell. ★
     """,
     """
                         ☆ Ribosome ☆
+
     ★ Tiny organelles are composed of 60%
     protein and 40% RNA. They help to
     make proteins and are attached 
@@ -54,12 +60,14 @@ NOTES_INDEX = [
     """,
     """
                         ☆ Golgi Body ☆
+
     ★ Also known as a Golgi Apparatus, this
     organelle helps to process and package
     proteins and lipid molecules. ★
     """,
     """
                     ☆ Cytoskeleton ☆
+
     ★ A structure that helps cells to keep
     their internal shape and provides
     mechanical support that assists
@@ -67,17 +75,20 @@ NOTES_INDEX = [
     """,
     """
                     ☆ Plasma Membrane ☆
+
     ★ Found in all cells. Separates the interior
     of the cell from the outside environment. ★
     """,
     """
                             ☆ Centrioles ☆
+
     ★ Self-replacing organelles are made up of
     nine bundles of microtubules. They assist in
     organizing cell divison. ★
     """,
     """
                         ☆ Lysosome ☆
+                        
     ★ Think of a lysosome as a janitor.
     Lysosomes break down cellular waste and
     give the materials to the cytoplasm
@@ -85,18 +96,21 @@ NOTES_INDEX = [
     """,
     """
                             ☆ DNA ☆
+
     ★ Contains all genetic information that is
     needed for reproduction and is essential
     for multiple cellular functions. ★
     """,
     """
                     ☆ Nucleolus ☆
+
     ★ The nucleolus is inside the nucleus and is
     concerned with producing and assembling
     the cell's ribosomes. ★
     """,
     """
                             ☆ Vacuole ☆
+                            
     ★ Specialized lysosomes. They take in and
     get rid of waste products. They also
     assist in cell structure. ★
