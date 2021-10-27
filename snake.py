@@ -12,6 +12,112 @@ FOOD_COLOR = "#FF00FF"
 BACKGROUND_COLOR = "#000000"
 DEBUG = True
 
+NOTES_INDEX = [
+    """
+                            ☆ Nucleus ☆
+
+    ★ Coordinates cell activities including growth, 
+    intermediary metabolism, protein synthesis, 
+    and reproduction. ★
+    """,
+    """
+                ☆ Cytoplasm ☆
+
+    ★ A jelly-like solution that
+    fills the inside of the cell and
+    surrounds other important parts
+    of the cell. ★
+    """,
+    """
+                        ☆ Mitochondrion ☆
+
+    ★ Oblong-shaped organelles, found in the
+    cytoplasm of cells In the animal cell, they are
+    the main source of power for the cell. ★
+    """,
+    """
+                        ☆ Rough ER ☆
+
+    ★ Has ribosomes on it, which help to
+    make proteins for the cell. The Rough ER 
+    gets its name because of the ribosomes
+    attached to it. ★
+    """,
+    """
+                        ☆ Smooth ER ☆
+
+    ★ The Smooth ER's job is to produce
+    substances that are needed for the cell. ★
+    """,
+    """
+                        ☆ Ribosome ☆
+
+    ★ Tiny organelles are composed of 60%
+    protein and 40% RNA. They help to
+    make proteins and are attached 
+    to the Rough ER. ★
+    """,
+    """
+                        ☆ Golgi Body ☆
+
+    ★ Also known as a Golgi Apparatus, this
+    organelle helps to process and package
+    proteins and lipid molecules. ★
+    """,
+    """
+                    ☆ Cytoskeleton ☆
+
+    ★ A structure that helps cells to keep
+    their internal shape and provides
+    mechanical support that assists
+    in division and reproduction. ★
+    """,
+    """
+                    ☆ Plasma Membrane ☆
+
+    ★ Found in all cells. Separates the interior
+    of the cell from the outside environment. ★
+    """,
+    """
+                            ☆ Centrioles ☆
+
+    ★ Self-replacing organelles are made up of
+    nine bundles of microtubules. They assist in
+    organizing cell divison. ★
+    """,
+    """
+                        ☆ Lysosome ☆
+
+    ★ Think of a lysosome as a janitor.
+    Lysosomes break down cellular waste and
+    give the materials to the cytoplasm
+    as new cell-building materials. ★
+    """,
+    """
+                            ☆ DNA ☆
+
+    ★ Contains all genetic information that is
+    needed for reproduction and is essential
+    for multiple cellular functions. ★
+    """,
+    """
+                    ☆ Nucleolus ☆
+
+    ★ The nucleolus is inside the nucleus and is
+    concerned with producing and assembling
+    the cell's ribosomes. ★
+    """,
+    """
+                            ☆ Vacuole ☆
+
+    ★ Specialized lysosomes. They take in and
+    get rid of waste products. They also
+    assist in cell structure. ★
+    """
+]
+
+RANDOM_NOTE = random.choice(NOTES_INDEX)
+
 class Snake:
 
     def __init__(self):
@@ -62,7 +168,7 @@ def next_turn(snake, food):
 
         score += 1
         if DEBUG is True:
-          print("[~] Debug: Increased the game score by +1")
+            print("[~] Debug: Increased the game score by +1")
 
         label.config(text="Score: {}".format(score))
 
@@ -91,22 +197,22 @@ def change_direction(new_direction):
         if direction != 'right':
             direction = new_direction
             if DEBUG is True:
-              print("[~] Debug: User has changed direction to RIGHT")
+                print("[~] Debug: User has changed direction to RIGHT")
     elif new_direction == 'right':
         if direction != 'left':
             direction = new_direction
             if DEBUG is True:
-              print("[~] Debug: User has changed direction to LEFT")
+                print("[~] Debug: User has changed direction to LEFT")
     elif new_direction == 'up':
         if direction != 'down':
             direction = new_direction
             if DEBUG is True:
-              print("[~] Debug: User has changed direction to UP")
+                print("[~] Debug: User has changed direction to UP")
     elif new_direction == 'down':
         if direction != 'up':
             direction = new_direction
             if DEBUG is True:
-              print("[~] Debug: User has changed direction to DOWN")
+                print("[~] Debug: User has changed direction to DOWN")
 
 def check_collisions(snake):
 
@@ -120,7 +226,7 @@ def check_collisions(snake):
     for body_part in snake.coordinates[1:]:
         if x == body_part[0] and y == body_part[1]:
             if DEBUG is True:
-              print("[~] Debug: User has game ended, wait a couple seconds before displaying notes.")
+                print("[~] Debug: User has game ended.")
             return True
 
     return False
@@ -128,16 +234,16 @@ def check_collisions(snake):
 def game_over():
 
     if DEBUG is True:
-      print("[~] Debug: User has game ended, wait a couple seconds before displaying notes.")
+      print("[~] Debug: User has game ended.")
     time.sleep(1)
     canvas.delete(ALL)
     canvas.create_text(canvas.winfo_width()/2, canvas.winfo_height()/2, font=("Ariel", 70), text="Game Over", fill="red",tag="gameover")
     time.sleep(1)
     canvas.delete(ALL)
-    canvas.create_text(canvas.winfo_width()/2, canvas.winfo_height()/2, font=("Ariel", 35), text="""
-    ★ Coordinates cell activities including growth, 
-    intermediary metabolism, protein synthesis, 
-    and reproduction.★""", fill="red",tag="notes_iwant_todie")
+    canvas.create_text(canvas.winfo_width()/2.1, canvas.winfo_height()/2.1, font=("Ariel", 35), text=RANDOM_NOTE, fill="red",tag="notes_iwant_todie")
+    if DEBUG is True:
+        print("[~] Debug: Displaying random note from NOTES_INDEX.")
+        print(RANDOM_NOTE)
 
 window = Tk()
 window.title("Snake v2")
