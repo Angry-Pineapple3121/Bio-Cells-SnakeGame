@@ -195,29 +195,25 @@ def change_direction(new_direction):
     global direction
 
     if new_direction == 'left':
-        if direction != 'right':
-          if direction != 'left':
+        if direction != 'right' and direction != 'left':
             direction = new_direction
             if DEBUG is True:
-              print("[~] Debug: User has changed direction to RIGHT")
+                print("[~] Debug: User has changed direction to RIGHT")
     elif new_direction == 'right':
-        if direction != 'left':
-          if direction != 'right':
+        if direction != 'left' and direction != 'right':
             direction = new_direction
             if DEBUG is True:
-              print("[~] Debug: User has changed direction to LEFT")
+                print("[~] Debug: User has changed direction to LEFT")
     elif new_direction == 'up':
-        if direction != 'down':
-          if direction != 'up':
+        if direction != 'down' and direction != 'up':
             direction = new_direction
             if DEBUG is True:
-              print("[~] Debug: User has changed direction to UP")
+                print("[~] Debug: User has changed direction to UP")
     elif new_direction == 'down':
-        if direction != 'up':
-          if direction != 'down':
+        if direction != 'up' and direction != 'down':
             direction = new_direction
             if DEBUG is True:
-              print("[~] Debug: User has changed direction to DOWN")
+                print("[~] Debug: User has changed direction to DOWN")
 
 def check_collisions(snake):
 
