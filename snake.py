@@ -3,8 +3,8 @@ import random
 import time
 import json
 
-GAME_WIDTH = 850
-GAME_HEIGHT = 600
+GAME_WIDTH = 1000
+GAME_HEIGHT = 700
 SPEED = 150
 SPACE_SIZE = 50
 BODY_PARTS = 3
@@ -15,7 +15,6 @@ DEBUG = True
 PRINT_NOTE_ON_GAME_END = True
 
 NOTES_INDEX = json.loads(open('notes.json').read())
-
 RANDOM_NOTE = random.choice(NOTES_INDEX)
 
 class Snake:
@@ -94,29 +93,25 @@ def change_direction(new_direction):
     global direction
 
     if new_direction == 'left':
-        if direction != 'right':
-          if direction != 'left':
-            direction = new_direction
-            if DEBUG is True:
-              print("[~] Debug: User has changed direction to RIGHT")
+        if direction != 'right' and direction != 'left':
+          direction = new_direction
+          if DEBUG is True:
+            print("[~] Debug: User has changed direction to RIGHT")
     elif new_direction == 'right':
-        if direction != 'left':
-          if direction != 'right':
-            direction = new_direction
-            if DEBUG is True:
-              print("[~] Debug: User has changed direction to LEFT")
+        if direction != 'left' and direction != 'right':
+          direction = new_direction
+          if DEBUG is True:
+            print("[~] Debug: User has changed direction to LEFT")
     elif new_direction == 'up':
-        if direction != 'down':
-          if direction != 'up':
-            direction = new_direction
-            if DEBUG is True:
-              print("[~] Debug: User has changed direction to UP")
+        if direction != 'down' and direction != 'up':
+          direction = new_direction
+          if DEBUG is True:
+            print("[~] Debug: User has changed direction to UP")
     elif new_direction == 'down':
-        if direction != 'up':
-          if direction != 'down':
-            direction = new_direction
-            if DEBUG is True:
-              print("[~] Debug: User has changed direction to DOWN")
+        if direction != 'up' and direction != 'down':
+          direction = new_direction
+          if DEBUG is True:
+            print("[~] Debug: User has changed direction to DOWN")
 
 def check_collisions(snake):
 
