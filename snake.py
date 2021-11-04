@@ -14,7 +14,10 @@ BACKGROUND_COLOR = "#000000"
 DEBUG = True
 PRINT_NOTE_ON_GAME_END = True
 
-NOTES_INDEX = json.loads(open('notes.json').read())
+NOTES_FILE = open('notes.json')
+NOTES_INDEX = json.loads(NOTES_FILE.read())
+NOTES_FILE.close()
+
 RANDOM_NOTE = random.choice(NOTES_INDEX)
 
 class Snake:
